@@ -16,11 +16,13 @@ h1{
     font-size: 5.4rem;
     color: #fff;
     margin-bottom: 5rem;
+    text-transform:uppercase ;
 }
 
 h2{
     font-size: 4.2rem;
     margin-bottom: 4rem;
+    color: #fff;
 }
 
 .container{
@@ -80,4 +82,17 @@ h2{
     cursor: not-allowed;
     box-shadow: none;
     transform: none;
+}
+
+#highscore-btn {
+    background: linear-gradient(90deg, rgb(152, 255, 18) 0%, rgb(21, 255, 0) 100%);
+}
+
+#highscore-btn:hover {
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(255,255,0,0.5);
+}
+
+.fa-crown .fa-play{
+    font-size: 2.5rem;
+    margin-left: 1rem;
 }
