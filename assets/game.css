@@ -36,3 +36,9 @@ body {
 .incorrect {
     background: linear-gradient(32deg, rgba(230, 21, 6) 0%, rgb(255, 0, 0) 100%);
 }
+
+@media screen and (max-width:768px) {
+    .choice-container {
+        min-width: 40rem;
+    }
+}
