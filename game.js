@@ -12,7 +12,7 @@ let availableQuestions = []
 
 let questions = [
     {
-        question: 'What element does 'O' represent on the periodic table?',
+        question: 'What element does O represent on the periodic table?',
         choice1: 'Helium',
         choice2: 'Oxygen',
         choice3: 'Cobalt',
@@ -44,7 +44,7 @@ let questions = [
         answer: 3,
     },
     {
-        question: ' A ‘goatee’ is a small type of what?',
+        question: ' A goatee is a small type of what?',
         choice1: 'Fork',
         choice2: 'Goat',
         choice3: 'Beard',
@@ -54,13 +54,13 @@ let questions = [
 ]
 
 const SCORE_POINTS = 100
-const MAX_QUESTIONS = 4
+const MAX_QUESTIONS = 5
 
 startGame = () => {
     questionCounter = 0
     score = 0
     availableQuestions = [...questions]
-    getNewQuestions()
+    getNewQuestion()
 }
 
 getNewQuestion = () => {
@@ -79,7 +79,7 @@ const questionsIndex = Math.floor(Math.random() * availableQuestions.length)
 currentQuestion = availableQuestions[questionsIndex]
 question.innerText = currentQuestion.question
 
-choices.forEach(choice=> {
+choices.forEach(choice => {
     const number = choice.dataset['number']
     choice.innerText = currentQuestion['choice' + number]
 })
@@ -90,14 +90,14 @@ acceptingAnswers = true
 }
 
 choices.forEach(choice => {
-    choice.addEventListener('click', e =>{
+    choice.addEventListener('click', e => {
         if(!acceptingAnswers) return
 
         acceptingAnswers = false
         const selectedChoice = e.target
         const selectedAnswer = selectedChoice.dataset['number']
 
-        let classToapply = selectedanswer == currentQuestion.answer ? 'correct' :
+        let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' :
         'incorrect'
 
         if(classToApply === 'correct'){
