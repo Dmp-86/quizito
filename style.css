@@ -14,7 +14,7 @@
 
 h1{
     font-size: 5.4rem;
-    color: #fff;
+    color: #d1ce0b;
     margin-bottom: 5rem;
     text-transform:uppercase ;
 }
@@ -25,9 +25,6 @@ h2{
     color: #fff;
 }
 
-/* a {
-    font-size: 4rem;
-} */
 
 .container{
     width: 100vw;
